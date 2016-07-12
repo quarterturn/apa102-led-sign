@@ -173,7 +173,7 @@ tmElements_t tm;
 // commands stored in FLASH
 // scroll left solid colors
 // 0 white text
-const char command0[] PROGMEM = { EFFECT_SCROLL_LEFT EFFECT_HSV "\x00\x00\xff" };
+const char command0[] PROGMEM = { EFFECT_SCROLL_LEFT EFFECT_HSV "\x01\x00\xff" };
 // 1 grey text
 const char command1[] PROGMEM = { EFFECT_SCROLL_LEFT EFFECT_HSV "\x00\x00\x7f" };
 // 2 red text
@@ -208,7 +208,7 @@ const char command15[] PROGMEM = { EFFECT_SCROLL_LEFT EFFECT_HSV "\xb0\x7f\xff" 
 
 // scroll up solid colors
 // 16 white text
-const char command16[] PROGMEM = { EFFECT_SCROLL_UP EFFECT_HSV "\x00\x00\xff" };
+const char command16[] PROGMEM = { EFFECT_SCROLL_UP EFFECT_HSV "\x01\x00\xff" };
 // 17 red text
 const char command17[] PROGMEM = { EFFECT_SCROLL_UP EFFECT_HSV "\x00\xff\xff" };
 // 18 orange text
@@ -1722,7 +1722,7 @@ void buttonA(void)
 //---------------------------------------------------------------------------------------------//
 void buttonB(void)
 {
-  const unsigned char myText[] = { "        " EFFECT_HSV "\x00\xff\xff" "LET'S " EFFECT_HSV "\xff\x00\xff" "GO " EFFECT_HSV "\xa0\xff\xff" "TITANS! " };
+  const unsigned char myText[] = { EFFECT_SCROLL_LEFT "        " EFFECT_HSV "\x00\xff\xff" "LET'S " EFFECT_HSV "\xff\x00\xff" "GO " EFFECT_HSV "\xa0\xff\xff" "TITANS! " };
 
   FastLED.clear(true);
 
@@ -1791,7 +1791,7 @@ void buttonC(void)
 //---------------------------------------------------------------------------------------------//
 void buttonD(void)
 {
-  const unsigned char myText[] = { EFFECT_RGB "\xff\xff\xff" EFFECT_BACKGND_ERASE EFFECT_COLR_EMPTY "        MAKE SOME NOISE!!!           " };
+  const unsigned char myText[] = { EFFECT_SCROLL_LEFT EFFECT_RGB "\xff\xff\xff" EFFECT_BACKGND_ERASE EFFECT_COLR_EMPTY "        MAKE SOME NOISE!!!           " };
 
   FastLED.clear(true);
 
